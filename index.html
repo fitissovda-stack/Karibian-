@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Карибский кризис — 13 дней на грани войны</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #333;
+    line-height: 1.7;
+}
+
+header {
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
+    color: white;
+    padding: 70px 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+header h1 { font-size: 42px; margin-bottom: 10px; }
+header p { font-size: 18px; opacity: 0.9; }
+
+nav {
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(8px);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+nav a:hover { color: #00d4ff; }
+
+section {
+    max-width: 1000px;
+    margin: 60px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    animation: fadeUp 1s ease;
+}
+
+h2 {
+    color: #1e3c72;
+    margin-bottom: 20px;
+    position: relative;
+}
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #1e3c72;
+    margin-top: 8px;
+    border-radius: 2px;
+}
+
+img {
+    width: 100%;
+    border-radius: 12px;
+    margin: 25px 0;
+    transition: 0.4s;
+}
+img:hover { transform: scale(1.02); }
+
+.timeline {
+    background: #f0f6ff;
+    padding: 18px;
+    border-left: 5px solid #1e3c72;
+    margin: 15px 0;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+.timeline:hover { background: #e3eeff; }
+
+.quote {
+    background: #eef4ff;
+    padding: 20px;
+    margin: 20px 0;
+    border-left: 5px solid #2a5298;
+    font-style: italic;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+th {
+    background: #1e3c72;
+    color: white;
+    padding: 12px;
+}
+td {
+    padding: 12px;
+    text-align: center;
+    background: #f8fbff;
+}
+tr:nth-child(even) td { background: #eef4ff; }
+
+.quiz button {
+    padding: 12px 18px;
+    margin-top: 15px;
+    background: linear-gradient(120deg, #1e3c72, #2a5298);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.quiz button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+footer {
+    background: #0f2027;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    header h1 { font-size: 28px; }
+    section { padding: 25px; margin: 30px 15px; }
+    nav a { display: block; margin: 8px 0; }
+}
+</style>
+
+<script>
+function checkAnswer() {
+    let score = 0;
+    
+    // Вопрос 1
+    const q1 = document.querySelector('input[name="q1"]:checked');
+    if (!q1) {
+        alert("Пожалуйста, ответьте на вопрос 1!");
+        return;
+    }
+    if (q1.value === "1962") score++;
+
+    // Вопрос 2
+    const q2 = document.querySelector('input[name="q2"]:checked');
+    if (!q2) {
+        alert("Пожалуйста, ответьте на вопрос 2!");
+        return;
+    }
+    if (q2.value === "Архипов") score++;
+
+    alert("Вы правильно ответили на " + score + " из 2 вопросов.");
+}
+</script>
+
+</head>
+<body>
+
+<header>
+<h1>Карибский кризис (1962)</h1>
+<p>13 дней, когда мир буквально стоял на краю ядерной войны</p>
+</header>
+
+<nav>
+<a href="#background">Предпосылки</a>
+<a href="#timeline">Хронология</a>
+<a href="#leaders">Лидеры</a>
+<a href="#military">Военный баланс</a>
+<a href="#results">Последствия</a>
+<a href="#facts">Интересные факты</a>
+<a href="#balance">Сравнение сил</a>
+<a href="#quotes">Цитаты</a>
+<a href="#quiz">Тест</a>
+<a href="#culture">В культуре</a>
+</nav>
+
+<section id="background" class="fade-in">
+<h2>Предпосылки конфликта</h2>
+<img src="https://static.tildacdn.com/tild3863-3039-4262-b730-303131613837/774-45_60.jpg">
+<p>После Кубинской революции 1959 года страна выбрала курс на сближение с СССР. Для США это стало серьёзным вызовом: коммунизм оказался буквально «под боком». Напряжение усилилось после неудачной операции в заливе Свиней в 1961 году — попытка свержения режима Кастро провалилась и лишь подтолкнула Кубу к более тесному союзу с Москвой.</p>
+<p>В ответ на размещение американских ракет в Турции и Италии Советский Союз начал переброску своих ядерных ракет на Кубу. До побережья США — всего около 145 километров. Стратегический баланс резко изменился, и ситуация стала взрывоопасной.</p>
+</section>
+
+<section id="timeline" class="fade-in">
+<h2>Хронология событий — 13 самых напряжённых дней</h2>
+<div class="timeline"><b>14 октября 1962</b> — самолёт-разведчик U-2 зафиксировал советские ракетные установки на Кубе.</div>
+<div class="timeline"><b>22 октября</b> — Джон Кеннеди объявил морскую блокаду Кубы.</div>
+<div class="timeline"><b>27 октября</b> — пик кризиса «чёрная суббота». Мир оказался в шаге от войны.</div>
+<div class="timeline"><b>28 октября</b> — СССР согласился демонтировать ракеты в обмен на гарантии безопасности Кубы.</div>
+<img src="https://ic.pics.livejournal.com/maysuryan/46825033/6271036/6271036_800.jpg">
+<p>Эти дни стали самым опасным моментом всей Холодной войны. Решения принимались под огромным давлением и с осознанием возможных катастрофических последствий.</p>
+</section>
+
+<section id="leaders" class="fade-in">
+<h2>Ключевые лидеры</h2>
+<ul>
+<li><b>Джон Ф. Кеннеди</b> — президент США, балансировал между силой и дипломатией.</li>
+<li><b>Никита Хрущёв</b> — руководитель СССР, стремившийся изменить стратегическое равновесие.</li>
+<li><b>Фидель Кастро</b> — лидер Кубы, оказавшийся в центре глобального противостояния сверхдержав.</li>
+</ul>
+</section>
+
+<section id="military" class="fade-in">
+<h2>Военный баланс сил</h2>
+<p>К началу 1960-х годов гонка вооружений достигла пугающего масштаба. Обе стороны обладали достаточным ядерным арсеналом, чтобы уничтожить друг друга — и вместе с этим большую часть планеты.</p>
+<p>Хотя у США было больше стратегических носителей, размещение советских ракет на Кубе создавало крайне опасную реальность.</p>
+</section>
+
+<section id="balance" class="fade-in">
+<h2>Сравнение ядерного потенциала (1962 год)</h2>
+<table>
+<tr><th>Показатель</th><th>США</th><th>СССР</th></tr>
+<tr><td>Межконтинентальные ракеты</td><td>170+</td><td>36</td></tr>
+<tr><td>Стратегические бомбардировщики</td><td>1300+</td><td>150+</td></tr>
+<tr><td>Ракеты на Кубе</td><td>0</td><td>42</td></tr>
+</table>
+</section>
+
+<section id="quotes" class="fade-in">
+<h2>Известные цитаты</h2>
+<div class="quote">«Мы не будем преждевременно или без необходимости рисковать мировой войной.» — Джон Ф. Кеннеди</div>
+<div class="quote">«Если вы подойдёте слишком близко к краю, можно упасть.» — Никита Хрущёв</div>
+</section>
+
+<section id="quiz" class="fade-in quiz">
+<h2>Мини-тест</h2>
+<p><b>1. В каком году произошёл Карибский кризис?</b></p>
+<label><input type="radio" name="q1" value="1961"> 1961</label><br>
+<label><input type="radio" name="q1" value="1962"> 1962</label><br>
+<label><input type="radio" name="q1" value="1963"> 1963</label><br>
+
+<p><b>2. Кто предотвратил применение ядерной торпеды на советской подлодке?</b></p>
+<label><input type="radio" name="q2" value="Кастро"> Фидель Кастро</label><br>
+<label><input type="radio" name="q2" value="Архипов"> Василий Архипов</label><br>
+<label><input type="radio" name="q2" value="Кеннеди"> Джон Кеннеди</label><br>
+
+<button onclick="checkAnswer()">Проверить результат</button>
+</section>
+
+<section id="culture" class="fade-in">
+<h2>Карибский кризис в культуре</h2>
+<ul>
+<li>Фильм «Тринадцать дней» (2000)</li>
+<li>Документальные проекты BBC и National Geographic</li>
+<li>Мемуары Роберта Кеннеди о закулисных переговорах</li>
+</ul>
+</section>
+
+<footer>
+<p>Исторический проект | Карибский кризис</p>
+</footer>
+
+</body>
+</html>
